@@ -98,7 +98,7 @@ class AppCubit extends Cubit<AppStates> {
           }
         },
       );
-      emit(AppGetDatabaseLoadingState());
+      emit(AppGetDatabaseState());
     });
   }
 
