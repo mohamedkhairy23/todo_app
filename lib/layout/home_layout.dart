@@ -104,7 +104,7 @@ class HomeLayout extends StatelessWidget {
                                       context: context,
                                       initialDate: DateTime.now(),
                                       firstDate: DateTime.now(),
-                                      lastDate: DateTime.parse("2021-09-03"),
+                                      lastDate: DateTime.parse('2028-01-01'),
                                     ).then((value) {
                                       dateController.text =
                                           DateFormat.yMMMd().format(value);
@@ -112,13 +112,14 @@ class HomeLayout extends StatelessWidget {
                                   },
                                   validator: (String value) {
                                     if (value.isEmpty) {
-                                      return "date must not be empty";
+                                      return 'date must not be empty';
                                     }
+
                                     return null;
                                   },
-                                  label: "Task Date",
+                                  label: 'Task Date',
                                   prefix: Icons.calendar_today,
-                                )
+                                ),
                               ],
                             ),
                           ),
